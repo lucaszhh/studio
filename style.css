@@ -13,11 +13,6 @@ body {
     width: 1920px;
     height: 1080px;
     background-color: #00ff00;
-
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
 }
 
 
@@ -25,35 +20,50 @@ body {
 .banner {
     width: 1000px;
     height: 150px;
+    position: relative;
 
-    background-color: aquamarine;
-    margin-bottom: 24px;
+    top: 800px;
+    left: 500px;
+
     display: none;
+    animation: banner 1s ease-in-out;
 }
 
-.verBanner {
-    display: block;
+
+
+@keyframes banner {
+    from{
+        opacity: 0%;
+        transform: translateX(1000px);
+    }
+    to{
+        opacity: 100%;
+    }
 }
+
 
 /* animacion */
 
+.animacion {
+    position: relative;
+    display: none;
+    width: 100px;
+    height: 100px;
+    animation: animacion 1s;
+    right: -300px;
+    top: 600px;
+}
+
 @keyframes animacion {
     0% {
-        opacity: 0;
-    }
-
-    25% {
-        transform: translateY(-20px);
-        opacity: 100%;
+        opacity: 0%;
     }
 
     100% {
-        opacity: 0%;
-        display: none;
+        opacity: 100%;
     }
 }
 
-.animacion {
-    border-radius: 50%;
-    animation: animacion 3s 1;
+.verBanner, .verAnimacion {
+    display: block;
 }
